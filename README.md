@@ -27,3 +27,6 @@ This repository contains the Android mobile port of **Pigeon Ascent**, ported an
 
 ## License
 MIT License. See [LICENSE](LICENSE) for details.
+
+### Trademark & Branding Notice
+The names "germaz", "germaz studio", and the `[germaz studio]` logo/splash assets are proprietary marks of Oskar Gerlicz-Kowalczuk / Germaz Studio. The MIT license governing the code does not grant rights to use these brand assets or trademarks.
