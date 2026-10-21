@@ -1,0 +1,12 @@
+Pigeon Ascent is a turn-based RPG where you take care of your own pigeon as they fight increasingly stronger foes.
+
+Train your bird's strength, defense, and speed, feed it to regain stamina, buy items from the shop, and ascend to higher ranks. Unlock dozens of distinct pigeon classes with unique special abilities and battle your way to the top!
+
+Features:
+- Tactical turn-based pigeon combat
+- Multiple stat upgrades and food items
+- Dozens of pigeon classes and evolutions to discover
+- Fully offline gameplay with zero ads or tracking
+- Native Godot engine performance tailored for Android
+
+Original game by Escada Games. Ported to Android and maintained by germaz studio.
