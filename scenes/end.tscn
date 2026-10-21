@@ -84,7 +84,7 @@ size_flags_vertical = 8
 custom_fonts/font = ExtResource( 6 )
 text = "Thanks a whole bunch for finishing our game!
 Really, wow! Thanks again!
--Escada Games"
+- Escada Games • Android port by germaz studio"
 align = 1
 valign = 2
 __meta__ = {
