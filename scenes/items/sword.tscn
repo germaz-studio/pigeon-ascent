@@ -46,9 +46,22 @@ func updateDescription():
 #	global.shopDescription.get_parent().get_node(\"hBoxContainer\")
 	global.shopDescription.get_parent().get_node(\"hBoxContainer/price\").text=String(self.itemPrice)
 
-func _input(event):
-	if event.is_action_pressed(\"ui_lmb\") and self.rect_scale>1.05*Vector2(1,1) and global.currentItem==self and self.clickable:
-		buy()
+func _gui_input(event):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
+		if self.clickable:
+			if global.currentItem == self:
+				buy()
+			else:
+				select_item()
+
+func select_item():
+	if global.currentItem != null and is_instance_valid(global.currentItem) and global.currentItem != self:
+		if global.currentItem.has_method("twnShrink"):
+			global.currentItem.twnShrink()
+	global.currentItem = self
+	updateDescription()
+	twnGrow()
+	global.createHoverSfx()
 
 func buy():
 	if global.player.gold>=self.itemPrice:
@@ -58,11 +71,16 @@ func buy():
 		global.bHasItem=true
 		global.createEvolvePanel()
 		global.createSelectSfx()
-		if self.unique:self.queue_free()
+		if self.unique:
+			if global.currentItem==self:global.currentItem=null
+			self.queue_free()
 	else:
 		global.createClickUnableSfx()
 	
 func twnGrow():
+	if global.currentItem != null and is_instance_valid(global.currentItem) and global.currentItem != self:
+		if global.currentItem.has_method("twnShrink"):
+			global.currentItem.twnShrink()
 	global.currentItem=self
 	$twnScale.interpolate_property(self,\"rect_scale\",self.rect_scale,self.tweenParameters.rect_scale_max,self.tweenParameters.duration,self.tweenParameters.type,self.tweenParameters.easing)
 	$twnScale.start()

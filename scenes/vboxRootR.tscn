@@ -168,7 +168,10 @@ func _ready():global.shopDescription=$marginContainer/vBoxContainer/label
 [sub_resource type="GDScript" id=13]
 script/source = "extends Label
 func _ready():
-	self.text=\"Hover your mouse over an item to see its info, and click it to buy!\"
+	if OS.has_feature(\"mobile\") or OS.has_feature(\"touchscreen\"):
+		self.text=\"Tap item to inspect, tap again (or BUY) to buy!\"
+	else:
+		self.text=\"Hover your mouse over an item to see its info, and click it to buy!\"
 "
 
 [sub_resource type="GDScript" id=14]
@@ -184,8 +187,8 @@ func _ready():
 	var _v2=self.connect(\"mouse_entered\",global,\"createHoverSfx\")
 	var _v3=self.connect(\"button_down\",global,\"createSelectSfx\")
 func buy():
-	global.currentItem.buy()
-		#Effect here
+	if global.currentItem != null and is_instance_valid(global.currentItem):
+		global.currentItem.buy()
 "
 
 [node name="vboxRootR" type="VBoxContainer"]
@@ -558,7 +561,6 @@ __meta__ = {
 }
 
 [node name="priceBtn" type="TextureButton" parent="panelRContainer/vbox/descriptionContainer/marginContainer/vBoxContainer/hBoxContainer"]
-visible = false
 margin_left = 566.0
 margin_right = 960.0
 margin_bottom = 36.0
@@ -572,3 +574,12 @@ texture_hover = ExtResource( 8 )
 texture_disabled = ExtResource( 5 )
 expand = true
 script = SubResource( 15 )
+
+[node name="label" type="Label" parent="panelRContainer/vbox/descriptionContainer/marginContainer/vBoxContainer/hBoxContainer/priceBtn"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_fonts/font = ExtResource( 3 )
+text = "BUY"
+align = 1
+valign = 1
