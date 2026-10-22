@@ -531,16 +531,13 @@ margin_right = 504.0
 margin_bottom = 20.0
 
 [node name="btnGoBack" type="Button" parent="marginCtn/battlePanel/vboxCtn/hboxCtnBot/vBoxContainer"]
-margin_right = 54.0
-margin_bottom = 20.0
+rect_min_size = Vector2( 180, 48 )
 mouse_default_cursor_shape = 2
 text = "Return"
 script = SubResource( 11 )
 
 [node name="btnReset" type="Button" parent="marginCtn/battlePanel/vboxCtn/hboxCtnBot/vBoxContainer"]
-margin_left = 2.0
-margin_right = 51.0
-margin_bottom = 20.0
+rect_min_size = Vector2( 180, 48 )
 mouse_default_cursor_shape = 2
 text = "Retry!"
 script = SubResource( 12 )

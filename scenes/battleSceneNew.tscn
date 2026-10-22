@@ -315,9 +315,10 @@ func appendMessage(message:String):
 "
 
 [sub_resource type="StyleBoxFlat" id=23]
-content_margin_left = 8.0
-content_margin_right = 8.0
-content_margin_bottom = 7.0
+content_margin_left = 18.0
+content_margin_right = 18.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
 bg_color = Color( 0.196078, 0.160784, 0.278431, 1 )
 border_width_left = 3
 border_width_top = 3
@@ -326,9 +327,10 @@ border_width_bottom = 3
 border_color = Color( 0.741176, 0.282353, 0.509804, 1 )
 
 [sub_resource type="StyleBoxFlat" id=24]
-content_margin_left = 8.0
-content_margin_right = 8.0
-content_margin_bottom = 7.0
+content_margin_left = 18.0
+content_margin_right = 18.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
 bg_color = Color( 0.196078, 0.160784, 0.278431, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -348,9 +350,10 @@ func _ready():
 "
 
 [sub_resource type="StyleBoxFlat" id=26]
-content_margin_left = 8.0
-content_margin_right = 4.0
-content_margin_bottom = 7.0
+content_margin_left = 18.0
+content_margin_right = 18.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
 bg_color = Color( 0.196078, 0.160784, 0.278431, 1 )
 border_width_left = 3
 border_width_top = 3
@@ -359,9 +362,10 @@ border_width_bottom = 3
 border_color = Color( 0.741176, 0.282353, 0.509804, 1 )
 
 [sub_resource type="StyleBoxFlat" id=27]
-content_margin_left = 8.0
-content_margin_right = 4.0
-content_margin_bottom = 7.0
+content_margin_left = 18.0
+content_margin_right = 18.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
 bg_color = Color( 0.196078, 0.160784, 0.278431, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -908,8 +912,7 @@ __meta__ = {
 }
 
 [node name="btnGoBack" type="Button" parent="marginCtn/battlePanel/ctnButtons/vBoxContainer"]
-margin_right = 88.0
-margin_bottom = 35.0
+rect_min_size = Vector2( 220, 52 )
 mouse_default_cursor_shape = 2
 custom_fonts/font = ExtResource( 15 )
 custom_styles/hover = SubResource( 23 )
@@ -919,9 +922,7 @@ text = "Return"
 script = SubResource( 25 )
 
 [node name="btnReset" type="Button" parent="marginCtn/battlePanel/ctnButtons/vBoxContainer"]
-margin_left = 2.0
-margin_right = 86.0
-margin_bottom = 35.0
+rect_min_size = Vector2( 220, 52 )
 mouse_default_cursor_shape = 2
 custom_fonts/font = ExtResource( 15 )
 custom_styles/hover = SubResource( 26 )

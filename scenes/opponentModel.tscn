@@ -45,6 +45,7 @@ func _ready():
 		$marginContainer/hboxEnemy/vboxDescription/hboxStats/descStr.text=\"Attack: \"+String(self.enemyStr)
 		$marginContainer/hboxEnemy/vboxDescription/hboxStats/descDef.text=\"Defense: \"+String(self.enemyDef)
 		$marginContainer/hboxEnemy/vboxDescription/hboxStats/descSpd.text=\"Speed: \"+String(self.enemySpd)
+		$marginContainer/hboxEnemy/vboxDescription/hboxStats/descGold.text=\"Reward: +\"+String(self.enemyGold)+\"G\"
 		$marginContainer/hboxEnemy/icon.texture=load(global.pigeonDict[self.enemyClass].portrait)
 	else:
 		self.enemyStr*=0.8
@@ -57,6 +58,7 @@ func _ready():
 		$marginContainer/hboxEnemy/vboxDescription/hboxStats/descStr.text=\"Attack: \"+String(self.enemyStr)
 		$marginContainer/hboxEnemy/vboxDescription/hboxStats/descDef.text=\"Defense: \"+String(self.enemyDef)
 		$marginContainer/hboxEnemy/vboxDescription/hboxStats/descSpd.text=\"Speed: \"+String(self.enemySpd)
+		$marginContainer/hboxEnemy/vboxDescription/hboxStats/descGold.text=\"Reward: +???\"
 		$marginContainer/hboxEnemy/icon.texture=load(global.pigeonDict[self.enemyClass].portrait)
 		
 #	$hboxEnemy/vboxDescription/name.name=self.enemyName
@@ -295,6 +297,23 @@ text = "Speed: 99"
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 333.0
 margin_right = 372.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="descGold" type="Label" parent="marginContainer/hboxEnemy/vboxDescription/hboxStats"]
+margin_left = 376.0
+margin_right = 450.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.894118, 0.470588, 1 )
+custom_colors/font_color_shadow = Color( 0.772549, 0.603922, 0.27451, 0.66 )
+custom_constants/shadow_as_outline = 0
+text = "Reward: +100G"
+
+[node name="vSeparator5" type="VSeparator" parent="marginContainer/hboxEnemy/vboxDescription/hboxStats"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 454.0
+margin_right = 460.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
 

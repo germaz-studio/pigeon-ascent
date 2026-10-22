@@ -109,6 +109,12 @@ func _process(delta):
 				registerSameTurn("[center][wave amp=100 freq=5]\n"+global.player.name + " won! [/wave][/center]\n")
 				registerSameTurn("")
 				registerSameTurn("[center]You got [color=#ffe478][u]" + String(goldToWin) + "[/u][/color] gold.[/center]")#
+				exitButton.text = "Return (+%d Gold)" % goldToWin
+				if battleLogText:
+					if "bufferedMessage" in battleLogText and battleLogText.bufferedMessage != "":
+						battleLogText.bbcode_text += battleLogText.bufferedMessage
+						battleLogText.bufferedMessage = ""
+					battleLogText.visible_characters = -1
 				ended=true
 				exitButton.modulate.a=0
 				exitButton.visible=true
@@ -118,6 +124,11 @@ func _process(delta):
 				registerSameTurn("[center][shake rate=15 level=10]\n"+global.enemy.name + " won... [/shake][/center]\n")
 				registerSameTurn("[center][color=#b0305c]" + "Game Over." + "[/color][/center]\n\n")
 				registerSameTurn("[center] Retry? [/center]")
+				if battleLogText:
+					if "bufferedMessage" in battleLogText and battleLogText.bufferedMessage != "":
+						battleLogText.bbcode_text += battleLogText.bufferedMessage
+						battleLogText.bufferedMessage = ""
+					battleLogText.visible_characters = -1
 				ended=true
 				resetButton.modulate.a=0
 				resetButton.visible=true
