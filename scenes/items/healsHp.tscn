@@ -55,7 +55,7 @@ func _gui_input(event):
 
 func select_item():
 	if global.currentItem != null and is_instance_valid(global.currentItem) and global.currentItem != self:
-		if global.currentItem.has_method("twnShrink"):
+		if global.currentItem.has_method(\"twnShrink\"):
 			global.currentItem.twnShrink()
 	global.currentItem = self
 	updateDescription()
@@ -76,7 +76,7 @@ func buy():
 	
 func twnGrow():
 	if global.currentItem != null and is_instance_valid(global.currentItem) and global.currentItem != self:
-		if global.currentItem.has_method("twnShrink"):
+		if global.currentItem.has_method(\"twnShrink\"):
 			global.currentItem.twnShrink()
 	global.currentItem=self
 	$twnScale.interpolate_property(self,\"rect_scale\",self.rect_scale,self.tweenParameters.rect_scale_max,self.tweenParameters.duration,self.tweenParameters.type,self.tweenParameters.easing)

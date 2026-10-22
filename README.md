@@ -1,6 +1,6 @@
 # Pigeon Ascent (Android Port)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Take care of your pigeon, train their stats, buy equipment, and ascend to defeat increasingly powerful foes in battle!
 
@@ -26,7 +26,7 @@ This repository contains the Android mobile port of **Pigeon Ascent**, ported an
 ---
 
 ## License
-MIT License. See [LICENSE](LICENSE) for details.
+Licensed under the [GNU General Public License v3.0](LICENSE) (GPLv3), with original game contributions by Guilherme Rodrigues Ribeiro and Rafael Pimentel da Silva (Escada Games) preserved under the MIT License.
 
 ### Trademark & Branding Notice
-The names "germaz", "germaz studio", and the `[germaz studio]` logo/splash assets are proprietary marks of Oskar Gerlicz-Kowalczuk / Germaz Studio. The MIT license governing the code does not grant rights to use these brand assets or trademarks.
+The names "germaz", "germaz studio", and the `[germaz studio]` logo/splash assets are proprietary marks of Oskar Gerlicz-Kowalczuk / Germaz Studio. The open-source license governing the code does not grant rights to use these brand assets or trademarks.
